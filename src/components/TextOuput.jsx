@@ -6,7 +6,7 @@ import React from "react";
 // 3. CREATE FUNCTION BASED COMPONENT
 const TextOuput = (props) => {
   return (
-    <div>
+    <div style={{ marginTop: "50px" }}>
       {props.response ? (
         <div className="item">
           <label style={{ fontSize: "20px" }}>{props.response}</label>

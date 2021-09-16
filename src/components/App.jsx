@@ -29,8 +29,8 @@ const options = [
     code: "es",
   },
   {
-    languageName: "Mongolian",
-    code: "mn",
+    languageName: "Hindi",
+    code: "hi",
   },
 ];
 
@@ -43,7 +43,7 @@ const App = () => {
   const [response, setResponse] = useState("");
 
   return (
-    <div className="ui container" style={{ marginTop: "30px" }}>
+    <div className="ui container" style={{ marginTop: "30px", width: "720px" }}>
       <Dropdown
         options={options}
         language={language}

@@ -65,7 +65,7 @@ const TextInput = (props) => {
 
   // Render component to the screen
   return (
-    <div className="ui segment">
+    <div className="ui segment" style={{ marginTop: "50px" }}>
       <div className="ui form">
         <div className="field">
           <label>Enter a Word</label>

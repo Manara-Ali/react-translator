@@ -25,7 +25,7 @@ const Dropdown = (props) => {
     };
   }, []);
 
-  // Create a reference to the dropdown form
+  // Create a reference to the form
   const formRef = useRef();
 
   // Create a list of all the languages in your dropdown
