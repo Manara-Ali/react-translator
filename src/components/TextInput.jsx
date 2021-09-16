@@ -49,7 +49,9 @@ const TextInput = (props) => {
             },
           }
         );
-        console.log(response);
+
+        // Store the response into state
+        props.setResponse(response.data.data.translations[0].translatedText);
       } catch (error) {
         console.error(error);
       }
@@ -59,7 +61,7 @@ const TextInput = (props) => {
     if (debouncedInput) {
       helperFunction();
     }
-  }, [languageCode, debouncedInput]);
+  }, [languageCode, debouncedInput, props]);
 
   // Render component to the screen
   return (

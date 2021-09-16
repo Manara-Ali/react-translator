@@ -4,6 +4,7 @@ import React, { useState } from "react";
 // 2. ADDITIONAL IMPORTS
 import Dropdown from "./Dropdown";
 import TextInput from "./TextInput";
+import TextOuput from "./TextOuput";
 
 // Static Data
 const options = [
@@ -38,6 +39,9 @@ const App = () => {
   // Create an initial state for our language option
   const [language, setLanguage] = useState(options[0]);
 
+  // Create a variable to keep track of the response body
+  const [response, setResponse] = useState("");
+
   return (
     <div className="ui container" style={{ marginTop: "30px" }}>
       <Dropdown
@@ -45,8 +49,8 @@ const App = () => {
         language={language}
         setLanguage={setLanguage}
       />
-      <hr />
-      <TextInput selectedLanguage={language} />
+      <TextInput selectedLanguage={language} setResponse={setResponse} />
+      <TextOuput response={response} />
     </div>
   );
 };
