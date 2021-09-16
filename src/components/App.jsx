@@ -2,12 +2,13 @@
 import React from "react";
 
 // 2. ADDITIONAL IMPORTS
+import Dropdown from "./Dropdown";
 
 // 3. CREATE A FUNCTION BASED COMPONENT
 const App = () => {
   return (
-    <div>
-      <h1>App Component</h1>
+    <div className="ui container" style={{ marginTop: "30px" }}>
+      <Dropdown />
     </div>
   );
 };

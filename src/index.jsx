@@ -5,6 +5,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 // 3. ADDITIONAL IMPORTS
+import "semantic-ui-css/semantic.min.css";
 import App from "./components/App";
 
 // 4. AUTO RELOAD
