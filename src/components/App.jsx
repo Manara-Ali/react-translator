@@ -36,6 +36,7 @@ const options = [
 const App = () => {
   // Create an initial state for our language option
   const [language, setLanguage] = useState(options[0]);
+
   return (
     <div className="ui container" style={{ marginTop: "30px" }}>
       <Dropdown
