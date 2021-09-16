@@ -1,14 +1,48 @@
 // 1. IMPORT REACT
-import React from "react";
+import React, { useState } from "react";
 
 // 2. ADDITIONAL IMPORTS
 import Dropdown from "./Dropdown";
 
+// Static Data
+const options = [
+  {
+    languageName: "Afrikaanas",
+    code: "af",
+  },
+  {
+    languageName: "French",
+    code: "fr",
+  },
+  {
+    languageName: "Spanish",
+    code: "es",
+  },
+  {
+    languageName: "Mongolian",
+    code: "mn",
+  },
+  {
+    languageName: "Swahili",
+    code: "sw",
+  },
+  {
+    languageName: "Kinyarwanda",
+    code: "rw",
+  },
+];
+
 // 3. CREATE A FUNCTION BASED COMPONENT
 const App = () => {
+  // Create an initial state for our language option
+  const [language, setLanguage] = useState(options[0]);
   return (
     <div className="ui container" style={{ marginTop: "30px" }}>
-      <Dropdown />
+      <Dropdown
+        options={options}
+        language={language}
+        setLanguage={setLanguage}
+      />
     </div>
   );
 };
