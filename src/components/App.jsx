@@ -3,6 +3,7 @@ import React, { useState } from "react";
 
 // 2. ADDITIONAL IMPORTS
 import Dropdown from "./Dropdown";
+import TextInput from "./TextInput";
 
 // Static Data
 const options = [
@@ -44,6 +45,8 @@ const App = () => {
         language={language}
         setLanguage={setLanguage}
       />
+      <hr />
+      <TextInput selectedLanguage={language} />
     </div>
   );
 };
