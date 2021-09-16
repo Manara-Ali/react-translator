@@ -46,7 +46,7 @@ const App = () => {
         setLanguage={setLanguage}
       />
       <hr />
-      <TextInput />
+      <TextInput selectedLanguage={language} />
     </div>
   );
 };
