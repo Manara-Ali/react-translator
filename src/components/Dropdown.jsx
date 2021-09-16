@@ -5,11 +5,16 @@ import React from "react";
 
 // 3. CREATE FUNCTION BASED COMPONENT
 const Dropdown = (props) => {
-  console.log(props);
   // Create a list of all the languages in your dropdown
   const listOfLanguages = props.options.map((element, index) => {
     return (
-      <div key={index} className="item">
+      <div
+        key={index}
+        className="item"
+        onClick={() => {
+          props.setLanguage(element);
+        }}
+      >
         {element.languageName}
       </div>
     );
