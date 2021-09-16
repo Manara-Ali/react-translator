@@ -7,6 +7,14 @@ import Dropdown from "./Dropdown";
 // Static Data
 const options = [
   {
+    languageName: "Swahili",
+    code: "sw",
+  },
+  {
+    languageName: "Kinyarwanda",
+    code: "rw",
+  },
+  {
     languageName: "Afrikaanas",
     code: "af",
   },
@@ -21,14 +29,6 @@ const options = [
   {
     languageName: "Mongolian",
     code: "mn",
-  },
-  {
-    languageName: "Swahili",
-    code: "sw",
-  },
-  {
-    languageName: "Kinyarwanda",
-    code: "rw",
   },
 ];
 
