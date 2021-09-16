@@ -21,16 +21,32 @@ const options = [
     code: "af",
   },
   {
-    languageName: "French",
-    code: "fr",
+    languageName: "Yoruba",
+    code: "yo",
   },
   {
-    languageName: "Spanish",
-    code: "es",
+    languageName: "Igbo",
+    code: "ig",
+  },
+  {
+    languageName: "Arabic",
+    code: "ar",
   },
   {
     languageName: "Hindi",
     code: "hi",
+  },
+  {
+    languageName: "Russian",
+    code: "ru",
+  },
+  {
+    languageName: "Turkish",
+    code: "tr",
+  },
+  {
+    languageName: "French",
+    code: "fr",
   },
 ];
 
