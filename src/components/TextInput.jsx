@@ -7,8 +7,11 @@ import api from "../googleApi/api";
 
 // 3. CREATE A FUNCTION BASED COMPONENT
 const TextInput = (props) => {
-  // Create a state variable to store user's inputs
+  // Create new variable to store user's inputs and user input handler
   const [userInput, setUserInput] = useState("");
+
+  // Create a state variable to debounce user input
+  const [debouncedInput, setDebouncedInput] = useState(userInput);
 
   // Create a variable to store the selected language coming from props
   let languageCode = props.selectedLanguage.code;
@@ -17,6 +20,19 @@ const TextInput = (props) => {
   const handleChange = (e) => {
     setUserInput(e.target.value);
   };
+
+  // Create an Effect that is responsible for debouncing user input
+  useEffect(() => {
+    // Set a timer for updating the debounced term
+    const setTimeoutId = setTimeout(() => {
+      setDebouncedInput(userInput);
+    }, 500);
+
+    // Cancel the previous timer if user continue typing
+    return () => {
+      clearTimeout(setTimeoutId);
+    };
+  }, [userInput]);
 
   // Create an Effect to make API calls
   useEffect(() => {
@@ -28,7 +44,7 @@ const TextInput = (props) => {
           {},
           {
             params: {
-              q: `${userInput}`,
+              q: `${debouncedInput}`,
               target: `${languageCode}`,
             },
           }
@@ -40,10 +56,10 @@ const TextInput = (props) => {
     };
 
     // Now I need to invoke the helper function to make the request
-    if (userInput) {
+    if (debouncedInput) {
       helperFunction();
     }
-  }, [languageCode, userInput]);
+  }, [languageCode, debouncedInput]);
 
   // Render component to the screen
   return (
