@@ -1,10 +1,13 @@
 // 1. IMPORT REACT
-import React from "react";
+import React, { useState } from "react";
 
 // 2. ADDITIONAL IMPORTS
 
 // 3. CREATE FUNCTION BASED COMPONENT
 const Dropdown = (props) => {
+  // Create a state  variable to keep track of the state of the dropdown
+  const [open, setOpen] = useState(false);
+
   // Create a list of all the languages in your dropdown
   const listOfLanguages = props.options.map((element, index) => {
     return (
@@ -19,14 +22,27 @@ const Dropdown = (props) => {
       </div>
     );
   });
+  console.log(open);
   return (
     <div className="ui form">
       <div className="field">
         <label className="label">Select Translation Language</label>
-        <div className="ui selection dropdown visible active">
+        <div
+          className={`ui selection dropdown ${open ? "visible active" : ""}`}
+          onClick={() => {
+            setOpen(!open);
+          }}
+        >
           <i className="dropdown icon"></i>
           <div className="text">{props.language.languageName}</div>
-          <div className="menu visible transition">{listOfLanguages}</div>
+          <div
+            className={`menu ${open ? "visible transition" : ""}`}
+            onClick={() => {
+              setOpen(!open);
+            }}
+          >
+            {listOfLanguages}
+          </div>
         </div>
       </div>
     </div>
