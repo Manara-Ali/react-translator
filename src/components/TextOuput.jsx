@@ -9,6 +9,15 @@ const TextOuput = (props) => {
     <div style={{ marginTop: "50px" }}>
       {props.response ? (
         <div className="item">
+          <hr
+            style={{
+              height: "1px",
+              border: "0",
+              marginBottom: "40px",
+              backgroundImage:
+                "-webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0)",
+            }}
+          />
           <label style={{ fontSize: "20px" }}>{props.response}</label>
           <div className="ui teal tag label" style={{ marginLeft: "30px" }}>
             Translation
