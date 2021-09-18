@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 
 // 2. ADDITIONAL IMPORTS
-import api from "./../.gitignore/googleApi/api";
+import api from "../googleApi/api";
 
 // 3. CREATE A FUNCTION BASED COMPONENT
 const TextInput = (props) => {
