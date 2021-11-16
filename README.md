@@ -2,6 +2,9 @@
 
 This project was create to help me communicate with natives of East Africa for my upcoming trip to Rwanda
 
+## Image In ReadMe
+![](images/React_Translator.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
